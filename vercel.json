@@ -14,16 +14,16 @@
     ],
     "routes": [
         {
-            "src": "/build/assets/(.*)",
-            "dest": "/public/build/assets/$1"
+            "src": "/build/(.*)",
+            "dest": "/public/build/"
         },
         {
-            "src": "/favicon.ico",
-            "dest": "/public/favicon.ico"
+            "src": "/resources/(.*)",
+            "dest": "/public/resources/"
         },
         {
-            "src": "/robots.txt",
-            "dest": "/public/robots.txt"
+            "src": "/favicon/(.*)",
+            "dest": "/public/favicon/"
         },
         {
             "src": "/(.*)",
