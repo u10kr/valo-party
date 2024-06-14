@@ -2,6 +2,8 @@
     "regions": [
         "hnd1"
     ],
+    "installCommand": "npm install",
+    "buildCommand": "npm run build",
     "builds": [
         {
             "src": "/api/index.php",
@@ -13,6 +15,10 @@
         }
     ],
     "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/"
+        },
         {
             "src": "/build/assets/(.*)",
             "dest": "/public/build/assets/$1"
