@@ -2,16 +2,10 @@
     "regions": [
         "hnd1"
     ],
-    "installCommand": "npm install",
-    "buildCommand": "npm run build",
     "builds": [
         {
             "src": "/api/index.php",
             "use": "vercel-php@0.7.1"
-        },
-        {
-            "src": "/public/build/**",
-            "use": "@vercel/static"
         },
         {
             "src": "/public/**",
@@ -20,12 +14,20 @@
     ],
     "routes": [
         {
-            "src": "/(favicon\\.ico|robots\\.txt)",
-            "dest": "/public/$1"
+            "src": "/build/(.*)",
+            "dest": "/public/build/"
         },
         {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
+            "src": "/build/assets/(.*)",
+            "dest": "/public/build/assets/$1"
+        },
+        {
+            "src": "/favicon.ico",
+            "dest": "/public/favicon.ico"
+        },
+        {
+            "src": "/robots.txt",
+            "dest": "/public/robots.txt"
         },
         {
             "src": "/(.*)",
