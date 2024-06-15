@@ -17,7 +17,7 @@
         },
         {
             "src": "/images/(.*)",
-            "dest": "/public/images/"
+            "dest": "/$1"
         },
         {
             "src": "/(\\.htaccess|favicon\\.ico|robots\\.txt)",
