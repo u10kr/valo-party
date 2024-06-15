@@ -20,20 +20,12 @@
     ],
     "routes": [
         {
+            "src": "/(favicon\\.ico|robots\\.txt)",
+            "dest": "/public/$1"
+        },
+        {
             "src": "/build/(.*)",
-            "dest": "/public/build/"
-        },
-        {
-            "src": "/build/assets/(.*)",
-            "dest": "/public/build/assets/$1"
-        },
-        {
-            "src": "/favicon.ico",
-            "dest": "/public/favicon.ico"
-        },
-        {
-            "src": "/robots.txt",
-            "dest": "/public/robots.txt"
+            "dest": "/public/build/$1"
         },
         {
             "src": "/(.*)",
