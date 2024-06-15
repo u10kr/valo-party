@@ -2,7 +2,6 @@
     "regions": [
         "hnd1"
     ],
-    "version": 2,
     "framework": null,
     "outputDirectory": "public",
     "functions": {
@@ -10,22 +9,22 @@
             "runtime": "vercel-php@0.7.0"
         }
     },
-    "routes": [
+    "rewrites": [
         {
-            "src": "/build/(.*)",
-            "dest": "/build/$1"
+            "source": "/build/(.*)",
+            "destination": "/build/$1"
         },
         {
-            "src": "/images/(.*)",
-            "dest": "/$1"
+            "source": "/images/(.*)",
+            "destination": "/$1"
         },
         {
-            "src": "/(\\.htaccess|favicon\\.ico|robots\\.txt)",
-            "dest": "/$1"
+            "source": "/(\\.htaccess|favicon\\.ico|robots\\.txt)",
+            "destination": "/$1"
         },
         {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
+            "source": "/(.*)",
+            "destination": "/api/index.php"
         }
     ],
     "env": {
