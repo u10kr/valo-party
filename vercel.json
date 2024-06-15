@@ -15,19 +15,11 @@
     "routes": [
         {
             "src": "/build/(.*)",
-            "dest": "/public/build/"
+            "dest": "/build/$1"
         },
         {
-            "src": "/build/assets/(.*)",
-            "dest": "/public/build/assets/$1"
-        },
-        {
-            "src": "/favicon.ico",
-            "dest": "/public/favicon.ico"
-        },
-        {
-            "src": "/robots.txt",
-            "dest": "/public/robots.txt"
+            "src": "/(\\.htaccess|favicon\\.ico|robots\\.txt)",
+            "dest": "/$1"
         },
         {
             "src": "/(.*)",
